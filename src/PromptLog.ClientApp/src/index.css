@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.prompt-container {
+    display: flex;
+    height: calc(100vh - 80px);
+    width: 100%;
+}
+
+.prompt-list {
+    width: 320px;
+    flex-shrink: 0;
+    cursor: pointer;
+    background-color: #f8fafd;
+    overflow: scroll;
+    border: 2px solid #dee6f3;
+    border-radius: 3px;
+}
+
+.prompt-list {
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+}
+
+.prompt-list li {
+    list-style: none;
+    padding: 5px 10px;
+    /* border-bottom: 1px solid #ccc; */
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.prompt-list li.selected {
+    background-color: #dee6f3;
+}
+
+.prompt-list .filter {
+    display: flex;
+    border-bottom: 1px solid #dee6f3;
+    background-color: #f2f5fa;
+    position: sticky; 
+    top: 0;
+}
+
+.prompt-list .filter label {
+    margin-right: 10px;
+}
+
+.prompt-detail {
+    width: 100%;
+    border: 2px solid #dee6f3;
+    border-radius: 5px;
+}
+
+.prompt-detail > div {
+    padding: 10px;
+}
+
+.prompt-detail label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    padding: 3px 10px;
+    font-size: 0.6em;
+}
+
+.prompt-detail pre {
+    white-space: pre-wrap;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.prompt-header {
+    padding: 10px;
+    font-style: italic;
+    background-color: #dee6f3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prompt-header .created {
+    font-weight: bold;
+}
+
+.prompt-header .model {
+    align-self: flex-end;
+    margin-left: 10px;
+}
+
+.raiting {
+    padding: 3px 6px;
+    margin: -3px -6px;
+    cursor: pointer;
+}

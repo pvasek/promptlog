@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{56E26132-346C-43EF-9276-80668500F5A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromptLog.App", "src\PromptLog.App\PromptLog.App.csproj", "{79F64044-6A04-40C8-8430-DDE5B0D949A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromptLog", "src\PromptLog\PromptLog.csproj", "{DAEC83C7-CD87-4641-BCEB-7C19C39B5E69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79F64044-6A04-40C8-8430-DDE5B0D949A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79F64044-6A04-40C8-8430-DDE5B0D949A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79F64044-6A04-40C8-8430-DDE5B0D949A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79F64044-6A04-40C8-8430-DDE5B0D949A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAEC83C7-CD87-4641-BCEB-7C19C39B5E69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAEC83C7-CD87-4641-BCEB-7C19C39B5E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAEC83C7-CD87-4641-BCEB-7C19C39B5E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAEC83C7-CD87-4641-BCEB-7C19C39B5E69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{79F64044-6A04-40C8-8430-DDE5B0D949A7} = {56E26132-346C-43EF-9276-80668500F5A8}
+		{DAEC83C7-CD87-4641-BCEB-7C19C39B5E69} = {56E26132-346C-43EF-9276-80668500F5A8}
+	EndGlobalSection
+EndGlobal
