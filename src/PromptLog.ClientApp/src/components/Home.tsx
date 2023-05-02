@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { PromptList } from "./PromptList";
 import { PromptDetail } from "./PromptDetail";
 import { PromptDetailDto } from "../api/PromptDetailDto";
+import { ErrorBoundary } from "react-error-boundary";
 
 interface HomeState {
     items: any[];
@@ -43,7 +44,9 @@ export class Home extends Component<HomeProps, HomeState> {
                     raitingFilter={this.state.raitingFilter}
                     onRatingFilterClick={() => this.onRatingFilterClick()}
                 />
-                <PromptDetail prompt={this.state.selectedItem} onRaitingClick={i => this.onRaitingClick(i)}/>
+                <ErrorBoundary fallback={<p>Error</p>}>
+                    <PromptDetail prompt={this.state.selectedItem} onRaitingClick={i => this.onRaitingClick(i)}/>
+                </ErrorBoundary>
             </div>
         );
     }
@@ -87,8 +90,16 @@ export class Home extends Component<HomeProps, HomeState> {
     async onItemSelected(item: any) {
         const response = await fetch(`api/prompts/${item.id}`);
         const data = await response.json();
-        data.request = JSON.parse(data.request);
-        data.response = JSON.parse(data.response);
+        try {
+            data.request = JSON.parse(data.request);            
+        } catch (e) {
+            data.request = {};
+        }
+        try {
+            data.response = JSON.parse(data.response);
+        } catch (e) {
+            data.response = {};
+        }
         this.setState({ selectedItem: data });
     } 
     
